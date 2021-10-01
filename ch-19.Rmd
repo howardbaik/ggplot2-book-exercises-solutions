@@ -1,0 +1,87 @@
+---
+title: "Solutions to Chapter 19 Exercises"
+author: "Howard Baek"
+date: "Last compiled on `r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+
+
+### 19.2.1 Exercises
+
+1. 
+```{r}
+pink_hist <- geom_histogram(
+  color = "pink",
+  bins = 100
+)
+```
+
+2. 
+```{r}
+fill_blues <- scale_fill_distiller(
+  palette = "Blues"
+)
+```
+
+
+3.
+```{r, eval=FALSE}
+?theme_gray()
+```
+
+- Its arguments include `base_size`, `base_family`, `base_line_size`, and `base_rect_size`
+- According to the help file, `theme_gray()` is the signature ggplot2 theme with a grey background and white gridlines and is designed to put the data forward yet make comparisons easy.
+
+
+
+4.
+```{r}
+scale_colour_wesanderson <- function(palette = "BottleRocket1", ...) {
+  scale_color_manual(values = wesanderson::wes_palette(palette), ...) 
+}
+
+# Working example
+ggplot(mtcars, aes(wt, disp, color = factor(gear))) +
+  geom_point() +
+  scale_colour_wesanderson()
+```
+
+
+
+
+### 19.3.4 Exercises
+
+1. 
+```{r}
+remove_labels <- theme(legend.position = "none",
+                       axis.title.x = element_blank(),
+                       axis.title.y = element_blank())
+
+# Working Example
+ggplot(mtcars, aes(wt, disp, color = factor(gear))) +
+  geom_point() +
+  remove_labels
+```
+
+
+2. Not sure 
+
+
+### 19.4.3. Exercises
+
+These questions are way above my head!
+
+### 19.5.1 Exercises
+
+These questions are way above my head!
