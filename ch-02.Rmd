@@ -53,7 +53,7 @@ mpgTol100km <- function(milespergallon){
 ```
 
 
-**4.  Which manufacturer has the most models in this dataset? Which model has the most variations? Does your answer change if you remove the redundant specification of drive train (e.g. "pathfinder 4wd", "a4 quattro") from the model name?**
+**4.  Which manufacturer has the most models in this dataset? Which model has the most variations? Does your answer change if you remove the redundant specification of drive train (e.g. "pathfinder 4wd", "a4 quattro") from the model name? **
 
 ```{r}
 # Count manufacturers and sort
